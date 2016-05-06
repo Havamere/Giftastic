@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url();
+    font-size: 18px;
+    line-height: 34px;
+    font-family: sans-serif;
+    background-size: 100% auto;
+}

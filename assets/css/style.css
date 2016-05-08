@@ -9,3 +9,58 @@ body {
     font-family: sans-serif;
     background-size: 100% auto;
 }
+
+/*Spacing Divs*/
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -80px;
+	width: 100%;
+	max-width: 960px;
+	clear: both;
+}
+
+.push {
+    height: 80px;
+    clear: both;
+}
+
+.container {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	clear: both;
+}
+
+/*Content Area*/
+header {
+	text-align: center;
+}
+
+
+
+   /*Footer*/
+
+footer {
+    position: fixed;
+    width: 100%;
+    padding: 5px 0;
+    border-top: 8px solid green;
+    clear: both;
+    text-align: center;
+    background-color: #000099;
+    height: 3em;
+    width: 100%;
+    z-index: 3;
+    bottom: 0;
+}
+
+#copyright {
+    color: #eee;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}

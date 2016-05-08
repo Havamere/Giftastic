@@ -46,20 +46,33 @@ header {
     font-size: 14px;
 }
 
+#addButton{
+    font-size: 12px;
+}
+
+#buttons {
+    float: left;
+}
+
+#button-form {
+    float: right;
+}
+
 .image {
     float: left;
     margin: 2px;
-    height: 300px;
+    height: 250px;
+    width: 250px;
 }
 
 .image p {
     color: gold;
 }
 
-.image img {
+/*.image img {
     height: 200px;
     width: 200px;
-}
+}*/
 
    /*Footer*/
 

@@ -29,12 +29,14 @@ $(document).ready(function(){
 		//allows the enter key to trigger the button's effect
 		return false;
 	})
-	//ajax call to produce 25 gifs of button choice
+	//ajax call to produce 10 gifs of button choice
 	$('.button').on('click', function(){
+		//Empties out Display area for new called sets of images
+		$('#display').empty();
 		//gets name to place into URL API call
 		var gifImage = $(this).data('name');
 		//assembles URL for API call
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gifImage + "&api_key=dc6zaTOxFJmzC";
+		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gifImage + "&api_key=dc6zaTOxFJmzC&limit=10";
 		//ajax call for gifs
 		$.ajax({
 			url: queryURL,
@@ -63,7 +65,7 @@ $(document).ready(function(){
 			})
 	})
 	//turns animation on and off when image is clicked on
-	$('div').on('click','.image', function(){
+	$(document).on('click','.image', function(){
 		//captures current state of image
 		var state = $(this).attr("data-state");
 		//flips image animation on and off

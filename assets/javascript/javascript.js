@@ -74,9 +74,9 @@ $(document).ready(function(){
 	        $(this).attr("src", $(this).data('animate'));
 	        $(this).attr('data-state', 'animate');
 	    }
-	    else /*(state == 'animate')*/ {
+	    if (state == 'animate') {
 	        $(this).attr("src", $(this).data('still'));
-	        $(this).attr('data-still', 'still');
+	        $(this).attr('data-state', 'still');
 	    }
 	}
 	//runs all on-click functions

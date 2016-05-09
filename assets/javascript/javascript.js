@@ -74,13 +74,13 @@ $(document).ready(function(){
 	        $(this).attr("src", $(this).data('animate'));
 	        $(this).attr('data-state', 'animate');
 	    }
-	    if (state == 'animate') {
+	    else /*(state == 'animate')*/ {
 	        $(this).attr("src", $(this).data('still'));
 	        $(this).attr('data-still', 'still');
 	    }
 	}
 	//runs all on-click functions
-	$(document).on('click','.image', animate);
+	$('#display').on('click','.image', animate);
 	$(document).on('click','.button', getImages);
 	$(document).on('click','#button-imput', addButton);
 	

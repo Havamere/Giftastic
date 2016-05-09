@@ -58,7 +58,7 @@ header {
     float: right;
 }
 
-.image {
+.image-holder {
     float: left;
     margin: 2px;
     height: 250px;

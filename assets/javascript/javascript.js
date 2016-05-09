@@ -30,7 +30,7 @@ $(document).ready(function(){
 		return false;
 	})
 	//ajax call to produce 10 gifs of button choice
-	$('.button').on('click', function(){
+	function getImages() {
 		//Empties out Display area for new called sets of images
 		$('#display').empty();
 		//gets name to place into URL API call
@@ -57,15 +57,16 @@ $(document).ready(function(){
 				    image.attr("data-still", results[i].images.fixed_width_still.url);
 				    image.attr("data-animate", results[i].images.fixed_width.url);
 				    image.attr("data-state", "still");
-				    imageDiv.addClass("image");
+				    image.addClass("image");
+				    imageDiv.addClass("image-holder");
 				    imageDiv.append(p);
 				    imageDiv.append(image);
 					$('#display').append(imageDiv);
 				}
 			})
-	})
+	}
 	//turns animation on and off when image is clicked on
-	$(document).on('click','.image', function(){
+	function animate() {
 		//captures current state of image
 		var state = $(this).attr("data-state");
 		//flips image animation on and off
@@ -77,5 +78,10 @@ $(document).ready(function(){
 	        $(this).attr("src", $(this).data('still'));
 	        $(this).attr('data-still', 'still');
 	    }
-	})
+	}
+	//runs all on-click functions
+	$(document).on('click','.image', animate);
+	$(document).on('click','.button', getImages);
+	$(document).on('click','#button-imput', addButton);
+	
 })

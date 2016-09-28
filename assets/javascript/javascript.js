@@ -36,7 +36,7 @@ $(document).ready(function(){
 		//gets name to place into URL API call
 		var gifImage = $(this).data('name');
 		//assembles URL for API call
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gifImage + "&api_key=dc6zaTOxFJmzC&limit=10";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifImage + "&api_key=dc6zaTOxFJmzC&limit=10";
 		//ajax call for gifs
 		$.ajax({
 			url: queryURL,
